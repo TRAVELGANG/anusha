@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	   <script language="javascript">
+	       function only()
+		   {
+		      var regex=/^[a-zA-Z]*$/;
+			  if(regex.test(document.form.text.value))
+			  {
+			     return true;
+			  }
+			  else
+			  {
+			    document.getElementById("notification").innerHTML=" In name section, Please enter alphabets only";
+			    return false;
+			  }
+           }
+	   </script>
+       <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        nav.nav-bar {
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(#AD8E85,#E4C6BD,#FEE6C4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        .logo {
+            height: 100%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        div.logo h1 a{
+            width: 100%;
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+            color: black;
+            text-decoration: none;
+            font-size: normal;
+            transition: all 0.5s ease-out;
+        }
+        div.logo h1 a:hover {
+            color: black;
+            font-size:x-large;
+            text-decoration: underline;
+        }
+            .menu-items {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            overflow: hidden;
+            gap: 20px;
+        }
+        .menu-items li {
+            list-style: none;
+        }
+        .menu-items li a {
+            color: black;
+            text-decoration: none;
+            font-size: normal;
+            transition: all 0.5s ease-out;
+        }
+        .menu-items li a:hover {
+            color: black;
+            font-size:x-large;
+            text-decoration: underline;
+        }
+        .my
+        {
+            text-align: center;
+            font-size: x-large;
+            font-weight: bolder;  
+        } 
+        .anusha{
+            text-align: center;
+        }
+        .anusha p{
+            font-size: large;
+        }
+        .you
+        {
+          font-size: x-large;
+          align-items: center;
+          font-weight: bold;
+        }
+        @media screen and (max-width: 750px) {
+            nav.nav-bar {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+            div.logo {
+                width: 100%;
+            }
+            ul.menu-items {
+                width: 100%;
+                overflow:visible;
+                gap: 10px;
+            }
+            ul.menu-items li a {
+                font-size: 13px;
+            }
+        }
+       </style>
+	</head>
+<body>	
+  <nav class="nav-bar">
+    <div class="logo"><h1><a href="index1.html">RITIKA'S MAKEUP STUDIO</a></h1></div>
+    <ul class="menu-items">
+        
+        <li><a href="blog.html">BLOGS</a></li>
+        <li><a href="courses.html">COURSES</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav><br><br>
+        <div class="my">
+        <P>LOGIN FORM</P></div><br><br>
+        <div class="anusha">
+ <form name="form" class="you">
+    <p>NAME:- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type="text" placeholder="enter the name" name="text"></p><br>
+    <p>PASSWORD:- &nbsp;&nbsp;<input type="password" placeholder="enter the password"></p><br>
+    <p>EMAIL:- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="mail" placeholder="email" name="mail" id="Email"></p><br>
+    <p>PHONE NO:- &nbsp; <input type="text" placeholder="enter the number" maxlength="10"></p><br>
+        
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
+    <input type="submit" value="login" onclick="return only()">
+                        &nbsp; &nbsp; &nbsp;
+                    
+                       <input type="reset" value="reset" name="set">
+                       <br><br><br>                       
+                         <div id="notification"></div>
+                    </form></div>
+</body>
+</html>
